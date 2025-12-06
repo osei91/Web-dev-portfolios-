@@ -1,4 +1,4 @@
-import React from 'react';
+import { ElementType } from 'react';
 
 export interface SectionProps {
   id: string;
@@ -18,14 +18,14 @@ export interface Skill {
   name: string;
   level: number; // 0 to 100
   // Allow both Lucide icons and custom React components (for brand logos)
-  icon: React.ElementType;
+  icon: ElementType;
   category: 'frontend' | 'backend' | 'ai' | 'tools' | 'payments';
 }
 
 export interface Service {
   title: string;
   description: string;
-  icon: React.ElementType;
+  icon: ElementType;
 }
 
 export interface NavItem {
