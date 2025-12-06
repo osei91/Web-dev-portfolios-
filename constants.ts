@@ -87,6 +87,15 @@ export const SERVICES: Service[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: 101,
+    title: "Launch Antler",
+    description: "A premium SaaS boilerplate and startup kit designed for speed. Includes authentication, Stripe payments, and a scalable database architecture to launch projects instantly.",
+    image: "https://picsum.photos/600/400?random=101",
+    tags: ["Next.js", "React", "Stripe", "Supabase"],
+    githubUrl: "#",
+    liveUrl: "https://launchantler.vercel.app"
+  },
+  {
     id: 1,
     title: "Nebula AI Assistant",
     description: "A smart coding assistant integrated directly into the web browser, powered by Gemini 2.5 Flash. Features real-time syntax highlighting and code suggestions.",

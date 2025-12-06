@@ -6,6 +6,15 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC<SectionProps> = ({ id }) => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id={id} className="min-h-screen flex items-center justify-center relative pt-20">
       <div className="container mx-auto px-6 z-10 text-center">
@@ -44,12 +53,12 @@ const Hero: React.FC<SectionProps> = ({ id }) => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="#contact">
+          <a href="#contact" onClick={(e) => handleScroll(e, '#contact')}>
             <NeonButton className="flex items-center gap-2 group">
               Hire Me <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </NeonButton>
           </a>
-          <a href="#projects">
+          <a href="#projects" onClick={(e) => handleScroll(e, '#projects')}>
             <NeonButton variant="secondary" className="flex items-center gap-2">
               View Projects
             </NeonButton>
